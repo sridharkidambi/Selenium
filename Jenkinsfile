@@ -49,7 +49,7 @@ pipeline {
 
          steps {
 
-            sh 'pip install virtualenv'
+            sh 'sudo pip install virtualenv'
             sh 'sudo python -m virtualenv env'
             sh 'source env/bin/activate'
             sh 'sudo pip install -r requirements.txt'
