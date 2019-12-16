@@ -35,8 +35,8 @@ pipeline {
             sh 'aws configure set aws_secret_access_key ${JENKINS_SECRET_ACCESS_KEY}'
             sh 'aws configure set default.region ${DEFAULT_REGION}'
             sh 'sudo `aws ecr get-login --no-include-email`'
-            sh 'docker pull 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew'
-            sh 'docker run -it -p 8081:8081 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew -d'
+            sh 'sudo docker pull 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew'
+            sh 'sudo docker run -it -p 8081:8081 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew -d'
 
          }
 
