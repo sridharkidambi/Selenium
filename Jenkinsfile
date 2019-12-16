@@ -34,6 +34,7 @@ pipeline {
             sh 'aws configure set aws_access_key_id ${JENKINS_ACCESS_KEY_ID}'
             sh 'aws configure set aws_secret_access_key ${JENKINS_SECRET_ACCESS_KEY}'
             sh 'aws configure set default.region ${DEFAULT_REGION}'
+            sh 'sudo docker stop $(docker ps -a -q)'
             sh 'sudo docker rm $(docker ps -a -q)'
             sh 'sudo `aws ecr get-login --no-include-email`'
             sh 'sudo docker pull 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew'
