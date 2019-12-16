@@ -36,7 +36,7 @@ pipeline {
             sh 'aws configure set default.region ${DEFAULT_REGION}'
             sh 'sudo `aws ecr get-login --no-include-email`'
             sh 'sudo docker pull 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew'
-            sh 'sudo docker run -i -p 8081:8081 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew -d'
+            sh 'sudo docker run -d -i -p 8081:8081 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew '
 
          }
 
