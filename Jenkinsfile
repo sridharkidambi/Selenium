@@ -40,7 +40,7 @@ pipeline {
             sh 'sudo docker pull 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew'
             sh 'sudo docker run -d -i -p 8081:8081 530817571331.dkr.ecr.us-east-1.amazonaws.com/docker-image:vinaynew '
             sh 'wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm'
-            sh 'yum localinstall google-chrome-stable_current_x86_64.rpm -y'
+            sh 'sudo yum localinstall google-chrome-stable_current_x86_64.rpm -y'
             sh 'wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip'
             sh 'unzip chromedriver_linux64.zip'
             sh 'sudo mv chromedriver /usr/bin/chromedriver'
